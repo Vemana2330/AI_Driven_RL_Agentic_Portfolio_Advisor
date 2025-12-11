@@ -1,0 +1,17 @@
+yfinance
+pandas
+numpy
+torch
+crewai
+crewai-tools
+python-dotenv
+tavily
+textblob
+nltk
+fredapi
+langchain_openai
+fastapi
+uvicorn
+pydantic
+streamlit
+scikit-learn
