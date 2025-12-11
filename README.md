@@ -1,6 +1,6 @@
 # AI-Driven RL Agentic Portfolio Advisor
 
-## 📈 Overview
+## Overview
 
 The **AI-Driven RL Agentic Portfolio Advisor** is a multi-agent, reinforcement learning–enhanced financial analysis system.
 
@@ -21,7 +21,7 @@ This project satisfies the **Building Agentic Systems** assignment by demonstrat
 
 ---
 
-## 🧠 Key Features
+## Key Features
 
 ### Multi-Agent Architecture
 Controller Agent orchestrates 10 specialized agents, ensuring clean workflow execution.
@@ -43,7 +43,8 @@ Processes requests, orchestrates agents, and returns structured JSON outputs.
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
+<img width="2408" height="1358" alt="System_Architecture_Portfolio" src="https://github.com/user-attachments/assets/8c4a3c0b-7897-451c-a519-1fa296fe1ce9" />
 
 ### 1. Frontend (Streamlit)
 - Investor profile input
@@ -70,30 +71,96 @@ Processes requests, orchestrates agents, and returns structured JSON outputs.
 
 ---
 
-## 📦 Project Structure
+##  Project Structure
 ```
-RL_Portfolio_Advisor/
+RL-AGENTIC-PORTFOLIO-SYSTEM/
+│
+├── agents/
+│   ├── rl_agents/
+│   │   ├── __init__.py
+│   │   ├── rl_agent_dqn.py
+│   │   ├── rl_agent_policy.py
+│   │
+│   │
+│   ├── controller_agent.py
+│   ├── macro_agent.py
+│   ├── performance_agent.py
+│   ├── risk_manager_agent.py
+│   ├── sentiment_agent.py
+│   ├── summary_report_agent.py
+│   ├── technical_analysis_agent.py
+│   ├── __init__.py
+│   
 │
 ├── backend/
-│   ├── main.py                   # FastAPI server
-│   ├── orchestration/            # Controller workflow
-│   ├── agents/                   # All specialist agents
-│   ├── rl/                       # DQN + PPO implementations
-│   └── utils/                    # Helpers, tools, config
+│   ├── main.py                      # FastAPI backend entrypoint
+│   
+│
+├── data/
+│   ├── external/
+│   └── raw/
+│       ├── ai_stocks.csv
+│       ├── benchmark_qqq.csv
+│       └── risk_free_rate.csv
 │
 ├── frontend/
-│   └── app.py                    # Streamlit UI
+│   ├── app.py                       # Streamlit UI
+│   ├── .streamlit/config.toml
+│   
+│   
 │
-├── quickstart.md                 # Quick start instructions
-├── README.md                     # Main documentation
+├── models/
+│   ├── rl_model_v1/                 # Trained DQN model
+│   ├── rl_policy_model/             # Trained Policy Gradient model
+│   ├── model_definition.py
+│   ├── __init__.py
+│   
+│
+├── reinforcement_learning/
+│   ├── feedback_manager.py          # RL Feedback Loop
+│   ├── __init__.py
+│   
+│
+├── rlenv/                           # Virtual Environment
+│   
+│
+├── tools/
+│   ├── tool_base.py
+│   ├── built_in_tools.py
+│   ├── custom_tools.py
+│   ├── phase_policy_inference.py
+│   ├── portfolio_allocator_agent_inference.py
+│   ├── __init__.py
+│   
+│
+├── utils/
+│   ├── agent_utils.py
+│   ├── __init__.py
+│   
+│
+├── workflow/
+│   ├── workflow_portfolio.py        # Main workflow executed by Controller
+│   ├── __init__.py
+│   
+│
+├── logs/
+│   
+│
+├── config.py
+├── download_data.py
+├── logging_utils.py
+├── rl_memory_portfolio.json         # RL Experience replay memory
+│
+├── README.md
 ├── requirements.txt
-├── .env                          # API keys (user-created)
-└── start scripts (.sh)
+│
+├── .env
+
 ```
 
 ---
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
 ### Get Running in 5 Minutes
 
@@ -153,13 +220,13 @@ Terminal 2:
 Go to: http://localhost:8501
 
 1. Set your investor profile
-2. Press "🚀 Run Portfolio Intelligence Analysis"
+2. Press " Run Portfolio Intelligence Analysis"
 3. Wait 30–60 seconds
 4. Explore all dashboard tabs
 
 ---
 
-## 📊 Application Workflow
+## Application Workflow
 
 ### 1. Key Metrics Dashboard
 - Return %
@@ -200,7 +267,7 @@ Go to: http://localhost:8501
 
 ---
 
-## 🛠 Troubleshooting
+## Troubleshooting
 
 ### "Module Not Found"
 ```bash
@@ -228,7 +295,7 @@ curl http://127.0.0.1:8000/
 
 ---
 
-## 🧩 Agents Included
+## Agents Included
 
 | Agent | Purpose |
 |-------|---------|
@@ -244,7 +311,7 @@ curl http://127.0.0.1:8000/
 
 ---
 
-## 🔁 Reinforcement Learning Feedback Loop
+## Reinforcement Learning Feedback Loop
 
 ### Two Layers of RL Feedback
 
@@ -258,10 +325,37 @@ curl http://127.0.0.1:8000/
 Feedback is stored persistently and shown in the UI.
 
 ---
+## References
 
-## 📄 License
+1. Sutton, R. S., & Barto, A. G. (2018). Reinforcement Learning: An Introduction (2nd ed.). MIT Press.
+2. Mnih, V. et al. (2015). "Human-level control through deep reinforcement learning." Nature, 518, 529–533.
+3. Schulman, J. et al. (2017). "Proximal Policy Optimization Algorithms." arXiv preprint arXiv:1707.06347.
+4. Silver, D. et al. (2016). "Mastering the game of Go with deep neural networks and tree search." Nature, 529, 484–489.
+5. Fama, E. F. (1970). “Efficient Capital Markets: A Review of Theory and Empirical Work.” The Journal of Finance, 25(2), 383–417.
+6. Markowitz, H. (1952). "Portfolio Selection." The Journal of Finance, 7(1), 77–91.
+7. Bodie, Z., Kane, A., & Marcus, A. (2014). Investments (10th ed.). McGraw-Hill.
+8. Yahoo Finance API. Market Data Retrieval. https://finance.yahoo.com/
+9. Vaswani, A. et al. (2017). "Attention Is All You Need." Advances in Neural Information Processing Systems.
+10. CrewAI Documentation. Agentic Framework for Multi-Agent Systems. https://docs.crewai.com/
+11. Streamlit Documentation. Application Development Framework. https://docs.streamlit.io/
+12. OpenAI API Documentation. LLM-Based Reasoning and Evaluation. https://platform.openai.com/docs
+13. Amodei, D. et al. (2016). “Concrete Problems in AI Safety.” arXiv preprint arXiv:1606.06565.
+14. ISO 31000 (2018). Risk Management – Guidelines. International Organization for Standardization.
 
-This project is licensed under the MIT License.
+## License
+
+This project is released under the MIT License, which permits unrestricted use, modification, and distribution of the software. Users are free to use the code for personal, academic, or commercial purposes as long as the license notice is included in any copies or substantial portions of the software.
+
+MIT License
+The software is provided free of charge and allows anyone to:
+Use the software for any purpose
+Copy and modify the source code
+Distribute the software or its modified versions
+Include the software in commercial applications
+The license also states that:
+The original copyright notice and permission notice must be included.
+The software is provided "as is" without warranties of any kind.
+The authors are not liable for any damages or claims arising from the use of the software.
 
 ---
 
