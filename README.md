@@ -1,5 +1,9 @@
 # AI-Driven RL Agentic Portfolio Advisor
 
+## Project Demonstration Videos
+- **[YouTube Walkthrough](https://youtu.be/Oz-I6YaoHhw)**
+- **[AI-Generated Explanation Video](https://drive.google.com/drive/folders/1DaxfgKoZTjpH9YOaNTW_x1VOSfIni4ee?usp=sharing)**
+
 ## Overview
 
 The **AI-Driven RL Agentic Portfolio Advisor** is a multi-agent, reinforcement learning–enhanced financial analysis system.
