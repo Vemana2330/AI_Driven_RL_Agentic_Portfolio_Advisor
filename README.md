@@ -359,6 +359,46 @@ The authors are not liable for any damages or claims arising from the use of the
 
 ---
 
+## AI Disclosure
+
+This project was created by me with assistance from AI tools(OpenAI ChatGPT) as permitted by course guidelines. AI supported the workflow, but all final decisions, implementations, and validations were done by me.
+
+### How AI Was Used
+- Clarified RL and Multi-Agent concepts when I asked for explanations.
+- Helped structure the project layout and teaching flow based on my instructions.
+- Generated initial examples or code templates when requested; I rewrote or modified all code.
+- Helped debug specific issues that I identified.
+- Assisted with improving clarity and formatting.
+
+### What I Directed AI To Do
+I explicitly instructed AI on:
+- How to design RL components.
+- How to structure the PPO and DQN training logic.
+- How to organize the MAS agent workflow.
+- How to format code for readability.
+
+### What AI Did Not Do
+- AI did not design the architecture.
+- AI did not implement the core RL algorithms or environments.
+- AI did not integrate the MAS with RL.
+- AI did not interpret results or run experiments.
+- AI did not write any final production code.
+- AI did not make any technical decisions independently.
+
+### My Contributions
+I independently:
+- Designed the full RL + MAS architecture.
+- Implemented DQN, PPO, all environments, and integration logic.
+- Performed data preprocessing, feature engineering, evaluations, and tuning.
+- Authored and validated all teaching materials and explanations and created Pedagogical Report.
+- Built the workflow across Notebook, FastAPI, and Streamlit.
+- Ensured correctness, coherence, and educational value of all components.
+
+### Compliance
+This disclosure satisfies transparency requirements.  
+AI served only as a supportive tool; all substantive work reflects my own understanding and implementation.
+
+
 ## 👨‍💻 Author
 
 **Vemana** (002475002) 
